@@ -184,7 +184,7 @@ section.repo-data {
 }
 
 .repo-list h3:hover {
-    background-color: #eee9ff;
+    background-color: #d1f0f9;
     cursor: pointer;
 }
 
@@ -198,7 +198,13 @@ section.repo-data {
 }
 
 .repo-data h3 {
+    font-size: 1.3em;
     text-align: left;
+    margin-bottom: 2em;
+}
+
+.repo-data p {
+    font-size: 1.2em;
 }
 
 .repo-data .visit {
@@ -211,6 +217,11 @@ section.repo-data {
     display: block;
     background-color: #4eb6d0;
     border: 1px solid #2d358f;
+}
+
+.visit {
+    font-size: 1.1em;
+    text-align: center;
 }
 
 .repo-data .visit:hover {
