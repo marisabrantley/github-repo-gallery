@@ -1,4 +1,3 @@
-// Targeting my GitHub profile information
 const overview = document.querySelector('.overview');
 const username = 'marisabrantley';
 const repoList = document.querySelector('.repo-list');
@@ -7,8 +6,6 @@ const repoDataSection = document.querySelector('.repo-data');
 const backButton = document.querySelector('.view-repos');
 const filterInput = document.querySelector('.filter-repos');
 
-
-// Fetches GitHub profile data
 const gitUserData = async () => {
     const userInfo = await fetch (`https://api.github.com/users/${username}`);
     const data = await userInfo.json();
@@ -18,7 +15,6 @@ const gitUserData = async () => {
 
 gitUserData();
 
-// To display fetched GitHub profile data
 const displayData = (data) => {
     filterInput.classList.remove('hide');
     const newDiv = document.createElement('div');
@@ -69,7 +65,6 @@ const getRepoInfo = async function (repoName) {
     const languageData = await fetchLanguages.json();
     // console.log(languageData);
 
-    //Language List
     const languages = [];
     for (const language in languageData) {
         languages.push(language);
@@ -101,7 +96,6 @@ backButton.addEventListener('click', () => {
     backButton.classList.add('hide');
 });
 
-// Search Element
 filterInput.addEventListener('input', (e) => {
     const searchValue = e.target.value;
     console.log(searchValue);
